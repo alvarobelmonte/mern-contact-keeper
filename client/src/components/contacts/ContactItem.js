@@ -14,9 +14,9 @@ const ContactItem = ({ contact }) => {
     };
 
     return (
-        <section className="tc pa3 pa5-ns">
-            <article className="hide-child relative ba b--black-20 mw5 center">
-                <img src="https://i.imgur.com/dOx2wRl.jpg" className="db" alt="Photo of Jesse Grant" />
+        <section className="tc pa2 pa3-ns">
+            <article className="hide-child relative ba b--black-20 mw5">
+                <img src="https://i.imgur.com/dOx2wRl.jpg" className="db" alt="Contact Photo" />
                 <div className="pa2 bt b--black-20">
                     <span className="f6 db link dark-blue hover-blue">{ name }</span> 
                     <span className={'b mw8 pa1 center br2 ba b--light-blue  ' + (type === 'professional' ? 'bg-pink' : 'bg-yellow')}>

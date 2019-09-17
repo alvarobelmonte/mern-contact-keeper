@@ -22,7 +22,7 @@ const ContactFilter = () => {
     };
 
     return (
-        <form>
+        <form className="measure left">
             <input ref={text} placeholder="Filter contacts..." type="text" onChange={onChange} />
         </form>
     )

@@ -43,21 +43,25 @@ const Login = props => {
         }
     };
     return (
-        <div className='form-container'>
-            <h1>
-                Account <span className="text-primary">Login</span>
-            </h1>
-            <form onSubmit={onSubmit}>
-                <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="text" name="email" value={email} onChange={onChange} />
+        <div className="form-container">
+            <form className="measure center" onSubmit={onSubmit}>
+                <fieldset id="login" className="ba b--transparent ph0 mh0">
+                <legend className="f4 fw6 ph0 mh0">Login</legend>
+                <div className="mt3">
+                    <label className="db fw6 lh-copy f6" htmlFor="email">Email</label>
+                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" onChange={onChange} type="email" 
+                    name="email"  id="email" value={email} required />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <input type="password" name="password" value={password} onChange={onChange} />
+                <div className="mv3">
+                    <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
+                    <input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" onChange={onChange} type="password" 
+                    name="password"  id="password" value={password} required />
                 </div>
 
-                <input type="submit" value="Login" className="btn btn-primary btn-block" />
+                </fieldset>
+                <div className="">
+                    <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Login"  />
+                </div>
             </form>
         </div>
     )

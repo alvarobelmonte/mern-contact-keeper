@@ -14,18 +14,18 @@ const Contacts = () => {
         //eslint-disable-next-line
     }, []);
 
-    if (!contacts && contacts.length === 0) {
+    if (!contacts) {
         return <h4>Add a contact</h4>;
     }
 
     return (
         <Fragment>
-                <div className="" style={{'zIndex': '-1', 'marginTop': '13rem'}}>
-                    <TransitionGroup>
+                <div style={{'zIndex': '-1', 'marginTop': '1rem'}}>
+                    <TransitionGroup className="flex flex-wrap">
                         {filtered ? 
                         filtered.map(contact  => 
                         <CSSTransition key={contact._id} timeout={1000} classNames="item">
-                            <ContactItem contact={contact}  />
+                            <ContactItem contact={contact} />
                         </CSSTransition>
                         ) :
                         (contacts.map(contact => 

@@ -19,7 +19,7 @@ const Navbar = ( { title, icon }) => {
     const authLinks = (
         <Fragment>
             <span className=" dim white dib mr3">Hello <span className="dim yellow dib mr6">{ user && user.name }</span></span>
-            <a href="!#" onClick={onLogout} className="link dim white dib mr3" to="/" title="Logout">Logout</a>
+            <Link onClick={onLogout} className="link dim white dib mr3" to="/" title="Logout">Logout</Link>
         </Fragment>
     );
 

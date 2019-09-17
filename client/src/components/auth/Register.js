@@ -49,28 +49,30 @@ const Register = props => {
     };
     return (
         <div className='form-container'>
-            <h1>
-                Account <span className="text-primary">Register</span>
-            </h1>
-            <form onSubmit={onSubmit}>
-                <div className="form-group">
-                    <label htmlFor="name">Name</label>
-                    <input type="text" name="name" value={name} onChange={onChange} required />
+            <form className="measure center" onSubmit={onSubmit}>
+                <fieldset id="register" className="ba b--transparent ph0 mh0">
+                <legend className="f4 fw6 ph0 mh0">New account</legend>
+                <div className="mt3">
+                    <label className="db fw6 lh-copy f6" htmlFor="name">Name</label>
+                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" onChange={onChange} type="text" name="name"  id="name" value={name}/>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="text" name="email" value={email} onChange={onChange} required />
+                <div className="mt3">
+                    <label className="db fw6 lh-copy f6" htmlFor="email">Email</label>
+                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" onChange={onChange} type="email" name="email"  id="email" value={email}/>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <input type="password" name="password" value={password} onChange={onChange} minLength="6" required />
+                <div className="mv3">
+                    <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
+                    <input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" onChange={onChange} type="password" name="password"  id="password" value={password}/>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="password2">Confirm Password</label>
-                    <input type="password" name="password2" value={password2} onChange={onChange} required />
+                <div className="mv3">
+                    <label className="db fw6 lh-copy f6" htmlFor="password2">Confirm Password</label>
+                    <input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" onChange={onChange} type="password" name="password2"  id="password2" value={password2}/>
                 </div>
 
-                <input type="submit" value="Register" className="btn btn-primary btn-block" />
+                </fieldset>
+                <div>
+                    <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Register"  />
+                </div>
             </form>
         </div>
     )
